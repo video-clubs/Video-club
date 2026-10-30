@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3.5rem;
+  background-color: #080808;
+  border-bottom: 1px solid #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Marca e Imagen de Letras (Izquierda) - TAMAÑO AGRANDADO */
+.navbar-brand a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo-letters {
+  height: 55px; /* Aumentado de 40px a 55px */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.navbar-logo-letters:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.7));
+}
+
+/* Respaldo de texto */
+.brand-fallback-text {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.brand-accent {
+  color: #e50914;
+}
+
+/* Enlaces de navegación (Centro) */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  border: 1px solid #e50914;
+  background-color: rgba(229, 9, 20, 0.15);
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.2);
+}
+
+/* Barra de búsqueda interactiva (Derecha) */
+.navbar-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 220px;
+}
+
+.navbar-search-box:focus-within {
+  border-color: #e50914;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+}
+
+.search-icon {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #777777;
+}

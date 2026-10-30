@@ -1,0 +1,273 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 550px;
+  background-color: #000;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Contenedor del video de fondo nativo */
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video-native {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Bloquea cualquier interacción sobre el video */
+}
+
+/* Capas de degradado para fundir el video con el fondo oscuro de la web */
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(8, 8, 8, 0.98) 0%, 
+    rgba(8, 8, 8, 0.85) 35%, 
+    rgba(8, 8, 8, 0.3) 65%, 
+    transparent 100%
+  ),
+  linear-gradient(
+    0deg, 
+    rgba(8, 8, 8, 1) 0%, 
+    transparent 30%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Contenido flotante principal a la izquierda */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  padding-left: 4rem;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.hero-brand-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #e50914;
+  text-transform: uppercase;
+}
+
+.hero-logo-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.highlight-red {
+  color: #e50914;
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+}
+
+.hero-short-desc {
+  font-size: 0.95rem;
+  color: #c0c0c0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Botones de Acción */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-play-trailer {
+  background-color: #e50914;
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-play-trailer:hover {
+  background-color: #b20710;
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+.btn-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(18, 18, 18, 0.6);
+  color: #ffffff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon-circle:hover {
+  background: rgba(229, 9, 20, 0.2);
+  border-color: #e50914;
+}
+
+.btn-icon-circle.added {
+  border-color: #25d366;
+  color: #25d366;
+}
+
+/* Botón flotante de silencio (estilo Netflix) */
+.mute-btn-streaming {
+  position: absolute;
+  bottom: 6rem;
+  right: 4rem;
+  background: rgba(18, 18, 18, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.mute-btn-streaming:hover {
+  background: rgba(229, 9, 20, 0.3);
+  border-color: #e50914;
+  transform: scale(1.05);
+}
+
+/* Pie del Banner */
+.hero-footer-bar {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-genres-badges {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.genre-tag {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d1d1;
+}
+
+.age-badge {
+  background: #121212;
+  border: 1px solid #e50914;
+  color: #e50914;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+/* Modal Emergente */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-card {
+  background: #121212;
+  border: 1px solid #e50914;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.btn-modal-rent {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-modal-rent:hover {
+  background: #b20710;
+}
