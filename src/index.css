@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* index.css */
 :root {
   --bg-color: #080808;         /* Fondo negro profundo */
@@ -11,11 +12,6 @@
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   background-color: var(--bg-color);
