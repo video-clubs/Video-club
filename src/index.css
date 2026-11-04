@@ -12,11 +12,15 @@
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Configuración de fuentes para Tailwind 4 */
+@theme {
+  --font-nosifer: "Nosifer", sans-serif;
+  --font-jolly: "Jolly Lodger", system-ui;
+}
 
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
-  font-family: var(--font-main);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -24,4 +28,21 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Tipografías globales */
+@layer base {
+  body {
+    font-family: "Jolly Lodger", system-ui;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+  }
 }
