@@ -1,0 +1,188 @@
+{
+  "peliculasTerror": [
+    {
+      "id": "1",
+      "titulo": "Así en la Tierra como en el Infierno",
+      "anio": "2014",
+      "genero": "Found Footage / Misterio",
+      "etiqueta": "DESTACADO",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/asienlatierra-comoenel-infierno.jpg"
+    },
+    {
+      "id": "2",
+      "titulo": "Psicosis",
+      "anio": "1960",
+      "genero": "Terror Clásico / Suspenso",
+      "etiqueta": "VHS VINTAGE",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/psicosis.jpg"
+    },
+    {
+      "id": "3",
+      "titulo": "El Legado del Diablo",
+      "anio": "2018",
+      "genero": "Terror Sobrenatural",
+      "etiqueta": "NC ORIGINAL",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/el-legado-deldiablojpg.jpg"
+    },
+    {
+      "id": "4",
+      "titulo": "La Noche de las Bestias",
+      "anio": "1984",
+      "genero": "Slasher / Retro 80s",
+      "etiqueta": "CULTO",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/la-noche-de-las-bestias.jpg"
+    },
+    {
+      "id": "5",
+      "titulo": "Voces en la Oscuridad",
+      "anio": "2023",
+      "genero": "Terror Psicológico",
+      "etiqueta": "ESTRENO",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/voces-enlaoscuridad.jpg"
+    },
+    {
+      "id": "6",
+      "titulo": "Masacre en el Campamento",
+      "anio": "1986",
+      "genero": "Slasher Clásico",
+      "etiqueta": "VHS VINTAGE",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/masacre-en-elcampento.jpg"
+    },
+    {
+      "id": "7",
+      "titulo": "Infección Z",
+      "anio": "2022",
+      "genero": "Survival Horror",
+      "etiqueta": "POPULAR",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/infeccion-z.jpg"
+    },
+    {
+      "id": "8",
+      "titulo": "El Retorno de las Sombras",
+      "anio": "2025",
+      "genero": "Sobrenatural / Misterio",
+      "etiqueta": "EXCLUSIVO",
+      "imagen": "Catalogo/los-masvistos/peliculasdeterror/el-retorno-de-las-sombras.jpg"
+    }
+  ],
+  "catalogo": {
+    "TOP 5": [
+      {
+        "id": "1",
+        "titulo": "sleepwalker",
+        "anio": "2026",
+        "genero": " / Terror / Suspenso",
+        "etiqueta": "NUEVO ESTRENO",
+        "imagen": "Top 5/sleep-walker.jpg"
+      },
+      {
+        "id": "2",
+        "titulo": "The ritual ",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Top 5/the ritual.jpg"
+      },
+      {
+        "id": "3",
+        "titulo": "La posesion de veronica",
+        "anio": "2026",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "NUEVO ESTRENO",
+        "imagen": "Top 5/la-posesion-veronica.jpg"
+      },
+      {
+        "id": "4",
+        "titulo": "Bird Box",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Top 5/bird-box.jpg"
+      },
+      {
+        "id": "5",
+        "titulo": "Anabelle 3",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Top 5/anabelle.jpg"
+      }
+    ],
+    "Los clasicos": [
+      {
+        "id": "1",
+        "titulo": "El exorcista",
+        "anio": "1973",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "CLASICO",
+        "imagen": "Clasicos/the-exorcist.webp"
+      },
+      {
+        "id": "2",
+        "titulo": "HALLOWEEN",
+        "anio": "1960",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "CLASICO",
+        "imagen": "Clasicos/halloweenwebp.webp"
+      },
+      {
+        "id": "3",
+        "titulo": "pesadilla",
+        "anio": "1980",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "CLASICO",
+        "imagen": "Clasicos/pesadilla.webp"
+      },
+      {
+        "id": "4",
+        "titulo": "El resplandor",
+        "anio": "1980",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "CLASICO",
+        "imagen": "Clasicos/el-resplandor.webp"
+      }
+    ],
+    "mas vistos": [
+      {
+        "id": "1",
+        "titulo": "The conjuring ",
+        "anio": "2026",
+        "genero": " / Terror / Suspenso",
+        "etiqueta": "NUEVO ESTRENO",
+        "imagen": "Catalogo/los-masvistos/the-conjuring.webp"
+      },
+      {
+        "id": "2",
+        "titulo": "la-maldicion ",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Catalogo/los-masvistos/la-maldicion.jpg"
+      },
+      {
+        "id": "3",
+        "titulo": "La noche de los muertos vivientes",
+        "anio": "2026",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "NUEVO ESTRENO",
+        "imagen": "Catalogo/los-masvistos/la-noche-de-losmuertos-vivientes.webp"
+      },
+      {
+        "id": "4",
+        "titulo": "el proyecto de la bruja de blair",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Catalogo/los-masvistos/el-proyecto-la-bruja-blair.webp"
+      },
+      {
+        "id": "5",
+        "titulo": "IT",
+        "anio": "2026",
+        "genero": "/ Terror / Sobrenatural",
+        "etiqueta": "EXCLUSIVO",
+        "imagen": "Catalogo/los-masvistos/it.webp"
+      }
+    ]
+  }
+}

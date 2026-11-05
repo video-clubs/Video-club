@@ -1,18 +1,27 @@
 import { useState } from "react";
 
-import movie from "../../data/movieData";
-
+// 1. Restauramos todas las importaciones de los subcomponentes del Hero
 import HeroVideo from "./HeroVideo";
 import HeroContent from "./HeroContent";
 import HeroFooter from "./HeroFooter";
 import HeroModal from "./HeroModal";
 
-export const Hero = () => {
+// 2. Constante local con datos de respaldo seguros basados en tu JSON real
+const MOVIE_DEFAULT = {
+  titulo: "Así en la Tierra como en el Infierno",
+  videoSrc: "",
+  genres: ["Found Footage", "Misterio"],
+  ageRating: "+16",
+  sinopsis: "Un equipo de arqueólogos busca la piedra filosofal en las catacumbas de París."
+};
 
+export const Hero = () => {
   // Estados del componente
   const [isAdded, setIsAdded] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [showModal, setShowModal] = useState(false);
+
+  const movie = MOVIE_DEFAULT;
 
   return (
     <section className="relative h-[85vh] min-h-[550px] w-full overflow-hidden bg-black text-white">
@@ -26,7 +35,11 @@ export const Hero = () => {
 
       {/* Información y botones */}
       <HeroContent
-        movie={movie}
+        movie={{
+          title: movie.titulo,
+          synopsis: movie.sinopsis || "",
+          ...movie
+        }}
         isAdded={isAdded}
         onToggleList={() => setIsAdded(!isAdded)}
         onShowDetails={() => setShowModal(true)}
@@ -41,7 +54,11 @@ export const Hero = () => {
       {/* Modal */}
       {showModal && (
         <HeroModal
-          movie={movie}
+          movie={{
+            title: movie.titulo,
+            synopsis: movie.sinopsis || "",
+            ...movie
+          }}
           onClose={() => setShowModal(false)}
         />
       )}
