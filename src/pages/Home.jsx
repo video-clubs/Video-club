@@ -6,8 +6,8 @@ function Home() {
   const [peliculas, setPeliculas] = useState([]);
 
   useEffect(() => {
-    // Consume las películas de terror independientes de localhost:5000
-    fetch('http://localhost:5000/peliculasTerror')
+    // Consume las películas de terror independientes de localhost:3000
+    fetch('http://localhost:3000/peliculasTerror')
       .then((res) => {
         if (!res.ok) throw new Error('Error cargando películas de terror');
         return res.json();

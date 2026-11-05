@@ -8,7 +8,6 @@ function MovieRow({ title, movies = [] }) {
   const handleScroll = (direction) => {
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
-
       const scrollAmount = clientWidth * 0.75;
 
       rowRef.current.scrollTo({
@@ -22,7 +21,7 @@ function MovieRow({ title, movies = [] }) {
   };
 
   return (
-    <section className="relative w-full bg-[#080808] px-6 py-8 md:px-16">
+    <section className="relative w-full bg-[#080808] px-6 py-4 md:px-16">
       {/* Título */}
       <h2 className="mb-4 border-l-4 border-[#e50914] pl-3 text-2xl font-extrabold uppercase tracking-wider text-white">
         {title}
@@ -45,8 +44,8 @@ function MovieRow({ title, movies = [] }) {
           ref={rowRef}
           className="flex w-full gap-[1.2rem] overflow-x-auto px-2 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+          {movies.map((movie, index) => (
+            <MovieCard key={movie.id ? `${movie.id}-${index}` : index} movie={movie} />
           ))}
         </div>
 

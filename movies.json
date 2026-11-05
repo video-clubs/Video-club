@@ -6,7 +6,7 @@
       "anio": "2014",
       "genero": "Found Footage / Misterio",
       "etiqueta": "DESTACADO",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/asienlatierra-comoenel-infierno.jpg"
+      "imagen": "peliculasdeterror/asienlatierra-comoenel-infiernojpg.jpg"
     },
     {
       "id": "2",
@@ -14,15 +14,15 @@
       "anio": "1960",
       "genero": "Terror Clásico / Suspenso",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/psicosis.jpg"
+      "imagen": "peliculasdeterror/psicosis.jpg"
     },
     {
       "id": "3",
       "titulo": "El Legado del Diablo",
       "anio": "2018",
-      "genero": "Terror Sobrenatural",
+      "genero": "Terror Sobrenatural", 
       "etiqueta": "NC ORIGINAL",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/el-legado-deldiablojpg.jpg"
+      "imagen": "peliculasdeterror/el-legado-deldiablojpg.jpg"
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "anio": "1984",
       "genero": "Slasher / Retro 80s",
       "etiqueta": "CULTO",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/la-noche-de-las-bestias.jpg"
+      "imagen": "peliculasdeterror/la-noche-de-las-bestias.jpg"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "anio": "2023",
       "genero": "Terror Psicológico",
       "etiqueta": "ESTRENO",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/voces-enlaoscuridad.jpg"
+      "imagen": " peliculasdeterror/voces-enlaoscuridad.jpg"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "anio": "1986",
       "genero": "Slasher Clásico",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/masacre-en-elcampento.jpg"
+      "imagen": "peliculasdeterror/masacre-en-elcampento.jpg"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "anio": "2022",
       "genero": "Survival Horror",
       "etiqueta": "POPULAR",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/infeccion-z.jpg"
+      "imagen": "peliculasdeterror/infeccion-z.jpg"
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
       "anio": "2025",
       "genero": "Sobrenatural / Misterio",
       "etiqueta": "EXCLUSIVO",
-      "imagen": "Catalogo/los-masvistos/peliculasdeterror/el-retorno-de-las-sombras.jpg"
+      "imagen": "peliculasdeterror/el-retorno-de-las-sombras.jpg"
     }
   ],
   "catalogo": {
@@ -149,7 +149,7 @@
         "anio": "2026",
         "genero": " / Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "Catalogo/los-masvistos/the-conjuring.webp"
+        "imagen": "los-masvistos/the-conjuring.webp"
       },
       {
         "id": "2",
@@ -157,7 +157,7 @@
         "anio": "2026",
         "genero": "/ Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Catalogo/los-masvistos/la-maldicion.jpg"
+        "imagen": "los-masvistos/la-maldicion.jpg"
       },
       {
         "id": "3",
@@ -165,7 +165,7 @@
         "anio": "2026",
         "genero": "/ Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "Catalogo/los-masvistos/la-noche-de-losmuertos-vivientes.webp"
+        "imagen": "los-masvistos/la-noche-de-losmuertos-vivientes.webp"
       },
       {
         "id": "4",
@@ -173,7 +173,7 @@
         "anio": "2026",
         "genero": "/ Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Catalogo/los-masvistos/el-proyecto-la-bruja-blair.webp"
+        "imagen": "los-masvistos/el-proyecto-la-bruja-blair.webp"
       },
       {
         "id": "5",
@@ -181,7 +181,7 @@
         "anio": "2026",
         "genero": "/ Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Catalogo/los-masvistos/it.webp"
+        "imagen": "los-masvistos/it.webp"
       }
     ]
   }
