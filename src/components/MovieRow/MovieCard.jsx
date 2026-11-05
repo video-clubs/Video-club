@@ -1,4 +1,9 @@
 function MovieCard({ movie }) {
+  // Aseguramos que la ruta comience con '/' antes de pegarla al localhost:3000
+  const rutaImagen = movie.imagen && movie.imagen.startsWith('/') 
+    ? movie.imagen 
+    : `/${movie.imagen}`;
+
   return (
     <article className="relative w-[220px] shrink-0 cursor-pointer overflow-hidden rounded-md border border-[#222] bg-[#121212] transition-all duration-300 hover:scale-105 hover:border-[#e50914] hover:shadow-[0_0_15px_rgba(229,9,20,0.4)]">
 
@@ -9,9 +14,9 @@ function MovieCard({ movie }) {
         </span>
       )}
 
-      {/* Imagen (Cambiado de movie.image a movie.imagen) */}
+      {/* Imagen apuntando al servidor del puerto 3000 */}
       <img
-        src={movie.imagen}
+        src={`http://localhost:3000${rutaImagen}`}
         alt={`Cartel de ${movie.titulo}`}
         className="h-[280px] w-full object-cover"
       />

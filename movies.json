@@ -1,12 +1,12 @@
 {
-  "peliculasTerror": [
+   "peliculasTerror": [
     {
       "id": "1",
       "titulo": "Así en la Tierra como en el Infierno",
       "anio": "2014",
       "genero": "Found Footage / Misterio",
       "etiqueta": "DESTACADO",
-      "imagen": "peliculasdeterror/asienlatierra-comoenel-infiernojpg.jpg"
+      "imagen": "/peliculasdeterror/asienlatierra-comoenel-infiernojpg.jpg"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "anio": "1960",
       "genero": "Terror Clásico / Suspenso",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "peliculasdeterror/psicosis.jpg"
+      "imagen": "/peliculasdeterror/psicosis.jpg"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "anio": "2018",
       "genero": "Terror Sobrenatural", 
       "etiqueta": "NC ORIGINAL",
-      "imagen": "peliculasdeterror/el-legado-deldiablojpg.jpg"
+      "imagen": "/peliculasdeterror/el-legado-deldiablojpg.jpg"
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "anio": "1984",
       "genero": "Slasher / Retro 80s",
       "etiqueta": "CULTO",
-      "imagen": "peliculasdeterror/la-noche-de-las-bestias.jpg"
+      "imagen": "/peliculasdeterror/la-noche-de-las-bestias.jpg"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "anio": "2023",
       "genero": "Terror Psicológico",
       "etiqueta": "ESTRENO",
-      "imagen": " peliculasdeterror/voces-enlaoscuridad.jpg"
+      "imagen": "/peliculasdeterror/voces-enlaoscuridad.jpg"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "anio": "1986",
       "genero": "Slasher Clásico",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "peliculasdeterror/masacre-en-elcampento.jpg"
+      "imagen": "/peliculasdeterror/masacre-en-elcampento.jpg"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "anio": "2022",
       "genero": "Survival Horror",
       "etiqueta": "POPULAR",
-      "imagen": "peliculasdeterror/infeccion-z.jpg"
+      "imagen": "/peliculasdeterror/infeccion-z.jpg"
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
       "anio": "2025",
       "genero": "Sobrenatural / Misterio",
       "etiqueta": "EXCLUSIVO",
-      "imagen": "peliculasdeterror/el-retorno-de-las-sombras.jpg"
+      "imagen": "/peliculasdeterror/el-retorno-de-las-sombras.jpg"
     }
   ],
   "catalogo": {
@@ -84,7 +84,7 @@
         "imagen": "Top 5/the ritual.jpg"
       },
       {
-        "id": "3",
+        "id": "3",  
         "titulo": "La posesion de veronica",
         "anio": "2026",
         "genero": "/ Terror / Suspenso",
@@ -129,7 +129,7 @@
         "id": "3",
         "titulo": "pesadilla",
         "anio": "1980",
-        "genero": "/ Terror / Suspenso",
+        "genero": " Terror / Suspenso",
         "etiqueta": "CLASICO",
         "imagen": "Clasicos/pesadilla.webp"
       },
