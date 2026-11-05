@@ -1,44 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import MovieRow from '../components/MovieRow/MovieRow';
 
-function Catalogo() {
-  const [catalogo, setCatalogo] = useState(null);
+// Catálogo ampliado de películas de terror con el código de Fabián
+const peliculasCatalogo = [
+  { id: 1, title: "Así en la Tierra como en el Infierno", year: "2014", genre: "Slasher", badge: "VHS VINTAGE", image: "https://..." },
+  { id: 2, title: "Psicosis", year: "1960", genre: "Clásico", badge: "VHS VINTAGE", image: "https://..." },
+  { id: 3, title: "El Legado del Diablo", year: "2018", genre: "Sobrenatural", badge: "NC ORIGINAL", image: "https://..." },
+  { id: 4, title: "La Noche de las Bestias", year: "1984", genre: "Slasher", badge: "CULTO", image: "https://..." },
+  { id: 5, title: "Voces en la Oscuridad", year: "2023", genre: "Psicológico", badge: "ESTRENO", image: "https://..." },
+  { id: 6, title: "Masacre en el Campamento", year: "1986", genre: "Slasher", badge: "VHS VINTAGE", image: "https://..." },
+  { id: 7, title: "Infección Z", year: "2022", genre: "Survival Horror", badge: "POPULAR", image: "https://..." },
+  { id: 8, title: "El Retorno de las Sombras", year: "2025", genre: "Sobrenatural", badge: "EXCLUSIVO", image: "https://..." }
+];
+
+export default function Catalogo() {
+  const [Catalogo, setCatalogo] = useState(null);
+  const [filtroCategoria, setFiltroCategoria] = useState("Todos");
+  const [busqueda, setBusqueda] = useState("");
+
+  const categorias = ["Todos", "Slasher", "Sobrenatural", "Found Footage", "Clásico", "Psicológico"];
 
   useEffect(() => {
-    // Trae el objeto catálogo completo desde localhost:5000
+    // Tu lógica de fetch local
     fetch('http://localhost:5000/catalogo')
       .then((res) => {
-        if (!res.ok) throw new Error('Error cargando el catálogo');
+        if (!res.ok) throw new Error('Error al cargar');
         return res.json();
       })
       .then((data) => setCatalogo(data))
       .catch((err) => console.error(err));
   }, []);
 
-  return (
-    <section className="catalogo-page" style={{ padding: '40px 0' }}>
-      <h1 style={{ color: 'white', padding: '0 4%', marginBottom: '20px' }}>Catálogo de Películas</h1>
-      
-      <div className="rows-container">
-        {/* Fila 1: TOP 5 */}
-        {catalogo && catalogo["TOP 5"] ? (
-          <MovieRow title="TOP 5" movies={catalogo["TOP 5"]} />
-        ) : (
-          <div style={{ color: 'white', padding: '20px 4%' }}>Cargando TOP 5...</div>
-        )}
-
-        {/* Fila 2: Los clásicos */}
-        {catalogo && catalogo["Los clasicos"] && (
-          <MovieRow title=" VHS (Clásicos)" movies={catalogo["Los clasicos"]} />
-        )}
-
-        {/* Fila 3: Más vistos */}
-        {catalogo && catalogo["mas vistos"] && (
-          <MovieRow title="Las Más Vistas" movies={catalogo["mas vistos"]} />
-        )}
-      </div>
-    </section>
-  );
-}
-
-export default Catalogo;
+  // Tu lógica de filtrado continúa abajo...

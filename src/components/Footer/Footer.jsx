@@ -20,6 +20,7 @@ export const Footer = () => {
             a entrar.
           </p>
 
+
           <p className="mb-3 text-[0.85rem] leading-relaxed text-[#888]">
             🕒 Horario de atención: Lunes a Domingo de 00:00 a 03:00
             (Hora de las Brujas).
