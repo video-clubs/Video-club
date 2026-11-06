@@ -140,6 +140,15 @@
         "genero": "/ Terror / Suspenso",
         "etiqueta": "CLASICO",
         "imagen": "Clasicos/el-resplandor.webp"
+      },
+
+      { 
+        "id": "4",
+        "titulo": "Frankenstein",
+        "anio": "1931",
+        "genero": "/ Terror / Suspenso",
+        "etiqueta": "CLASICO",
+        "imagen": "Clasicos/frankenstein.webp"
       }
     ],
     "mas vistos": [

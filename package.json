@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "server": " json-server movies.json --port 3000"
+    "api": "npx json-server --watch src/data/movies.json --port 3000"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
