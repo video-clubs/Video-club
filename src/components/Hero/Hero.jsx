@@ -7,14 +7,7 @@ import HeroContent from "./HeroContent";
 import HeroFooter from "./HeroFooter";
 import HeroModal from "./HeroModal";
 
-// 2. Constante local con datos de respaldo seguros basados en tu JSON real
-const MOVIE_DEFAULT = {
-  titulo: "Así en la Tierra como en el Infierno",
-  videoSrc: "",
-  genres: ["Found Footage", "Misterio"],
-  ageRating: "+16",
-  sinopsis: "Un equipo de arqueólogos busca la piedra filosofal en las catacumbas de París."
-};
+
 
 export const Hero = () => {
   // Estados del componente
@@ -22,7 +15,6 @@ export const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
-  const movie = MOVIE_DEFAULT;
 
   return (
     <section className="relative h-[85vh] min-h-[550px] w-full overflow-hidden bg-black text-white">
