@@ -1,7 +1,7 @@
-import Title from "../components/Contact/Title";
-import InfoItem from "../components/Contact/InfoItem";
-import Map from "../components/Contact/Map";
-import Form from "../components/Contact/Form";
+import Title from "../components/Contacto/Title";
+import Info from "../components/Contacto/Info";
+import  Map from "../components/Contacto/Map";
+import Form from "../components/Contacto/Form";
 
 function Contacto() {
   return (
@@ -9,17 +9,15 @@ function Contacto() {
       <Title />
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-        {/* Columna izquierda: datos y mapa */}
         <div className="flex flex-col gap-4">
-          <InfoItem />
+          <Info />
           <Map />
         </div>
 
-        {/* Columna derecha: formulario */}
         <Form />
       </div>
     </div>
   );
 }
 
-export default Contacto; 
+export default Contacto;
