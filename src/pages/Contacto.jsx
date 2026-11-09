@@ -1,7 +1,7 @@
-import Title from "../components/Contacto/Title";
-import Info from "../components/Contacto/Info";
-import  Map from "../components/Contacto/Map";
-import Form from "../components/Contacto/Form";
+import Title from "../components/Contact/Title";
+import Info from "../components/Contact/Info";
+import  Map from "../components/Contact/Map";
+import Form from "../components/Contact/Form";
 
 function Contacto() {
   return (
