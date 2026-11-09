@@ -8,7 +8,7 @@ function Home() {
 
   // 2. Usamos useEffect para hacer la petición fetch cuando el componente se monte
   useEffect(() => {
-    fetch('http://localhost:3000/peliculas')
+    fetch('http://localhost:3000/peliculasTerror')
       .then((res) => {
         if (!res.ok) throw new Error('Error al cargar catálogo');
         return res.json();

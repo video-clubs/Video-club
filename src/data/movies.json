@@ -7,7 +7,7 @@
       "anio": "2014",
       "genero": "Found Footage / Misterio",
       "etiqueta": "DESTACADO",
-      "imagen": "/asienlatierra-comoenel-infiernojpg.jpg"
+      "imagen": "/peliculas/asienlatierra-comoenel-infiernojpg.jpg"
     },
     {
       "id": "2",
@@ -15,7 +15,7 @@
       "anio": "1960",
       "genero": "Terror Clásico / Suspenso",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "/psicosis.jpg"
+      "imagen": "/peliculas/psicosis.jpg"
     },
     {
       "id": "3",
@@ -23,7 +23,7 @@
       "anio": "2018",
       "genero": "Terror Sobrenatural",
       "etiqueta": "NC ORIGINAL",
-      "imagen": "/el-legado-deldiablojpg.jpg"
+      "imagen": "/peliculas/el-legado-deldiablojpg.jpg"
     },
     {
       "id": "4",
@@ -31,7 +31,7 @@
       "anio": "1984",
       "genero": "Slasher / Retro 80s",
       "etiqueta": "CULTO",
-      "imagen": "/la-noche-de-las-bestias.jpg"
+      "imagen": "/peliculas/la-noche-de-las-bestias.jpg"
     },
     {
       "id": "5",
@@ -39,7 +39,7 @@
       "anio": "2023",
       "genero": "Terror Psicológico",
       "etiqueta": "ESTRENO",
-      "imagen": "/voces-enlaoscuridad.jpg"
+      "imagen": "/peliculas/voces-enlaoscuridad.jpg"
     },
     {
       "id": "6",
@@ -47,7 +47,7 @@
       "anio": "1986",
       "genero": "Slasher Clásico",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "/masacre-en-elcampento.jpg"
+      "imagen": "/peliculas/masacre-en-elcampento.jpg"
     },
     {
       "id": "7",
@@ -55,7 +55,7 @@
       "anio": "2022",
       "genero": "Survival Horror",
       "etiqueta": "POPULAR",
-      "imagen": "/infeccion-z.jpg"
+      "imagen": "/peliculas/infeccion-z.jpg"
     },
     {
       "id": "8",
@@ -63,7 +63,7 @@
       "anio": "2025",
       "genero": "Sobrenatural / Misterio",
       "etiqueta": "EXCLUSIVO",
-      "imagen": "/el-retorno-de-las-sombras.jpg"
+      "imagen": "/peliculas/el-retorno-de-las-sombras.jpg"
     }
   ],
   "catalogo": {
@@ -82,7 +82,7 @@
         "anio": "2026",
         "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "/peliculas/top-5/the ritual.jpg"
+        "imagen": "/peliculas/top-5/the-ritual.jpg"
       },
       {
         "id": "3",
