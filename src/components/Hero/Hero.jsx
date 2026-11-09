@@ -1,4 +1,5 @@
 import { useState } from "react";
+import movie from "../../data/movieData";
 
 // 1. Restauramos todas las importaciones de los subcomponentes del Hero
 import HeroVideo from "./HeroVideo";
