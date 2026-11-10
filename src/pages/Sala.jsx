@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+<<<<<<< HEAD
 // Las 3 cabinas oficiales de nuestro videoclub equipadas con PC
 const cabinasFijas = [
   {
@@ -31,7 +32,10 @@ const cabinasFijas = [
   },
 ];
 
+=======
+>>>>>>> 357c59f (sala y prestamo)
 export default function Sala() {
+  const [salas, setSalas] = useState([]);
   const [catalog, setCatalog] = useState({});
   const [cargando, setCargando] = useState(true);
 
@@ -44,6 +48,7 @@ export default function Sala() {
   const [mensajeExito, setMensajeExito] = useState(null);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Petición al endpoint del catálogo en tu json-server
     fetch("http://localhost:3000/catalogo")
       .then((res) => {
@@ -57,19 +62,46 @@ export default function Sala() {
       })
       .catch((err) => {
         console.error("Error al conectar con la API:", err);
+=======
+    cargarDatosSala();
+  }, []);
+
+  const cargarDatosSala = () => {
+    setCargando(true);
+    Promise.all([
+      fetch('http://localhost:3000/salas').then((res) => (res.ok ? res.json() : [])),
+      fetch('http://localhost:3000/catalogo').then((res) => (res.ok ? res.json() : {}))
+    ])
+      .then(([salasData, catalogData]) => {
+        setSalas(Array.isArray(salasData) ? salasData : []);
+        setCatalog(catalogData || {});
+        setCargando(false);
+      })
+      .catch((err) => {
+        console.error('Error al conectar con la API:', err);
+        setSalas([]);
+>>>>>>> 357c59f (sala y prestamo)
         setCatalog({});
         setCargando(false);
       });
-  }, []);
+  };
 
-  // Función para formatear la ruta exactamente como está en tu carpeta public
+  // Función robusta para la ruta de imágenes compatible con subdirectorios y espacios
   const obtenerRutaImagen = (ruta) => {
     if (!ruta) return "";
+<<<<<<< HEAD
     return ruta.startsWith("/") ? ruta : `/${ruta}`;
+=======
+    const cleanPath = ruta.startsWith('/') ? ruta.slice(1) : ruta;
+    const base = import.meta.env.BASE_URL || '/';
+    const baseNormalized = base.endsWith('/') ? base : `${base}/`;
+    return encodeURI(`${baseNormalized}${cleanPath}`);
+>>>>>>> 357c59f (sala y prestamo)
   };
 
   const handleReservar = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     if (
       !cabinaSeleccionada ||
       !peliculaElegida ||
@@ -79,6 +111,10 @@ export default function Sala() {
       alert(
         "Por favor, selecciona una cabina, una película de tu listado, tu nombre y la fecha.",
       );
+=======
+    if (!cabinaSeleccionada || !peliculaElegida || !nombreUsuario || !fechaReserva) {
+      alert('Por favor, selecciona una cabina, una película, tu nombre y la fecha de la sesión.');
+>>>>>>> 357c59f (sala y prestamo)
       return;
     }
 
@@ -98,6 +134,7 @@ export default function Sala() {
       body: JSON.stringify(nuevaReserva),
     })
       .then((res) => {
+<<<<<<< HEAD
         if (!res.ok)
           throw new Error("Error al registrar la reserva en la base de datos");
         return res.json();
@@ -110,51 +147,78 @@ export default function Sala() {
         setFechaReserva("");
         setCabinaSeleccionada("");
         setPeliculaElegida("");
+=======
+        if (!res.ok) throw new Error('Error al registrar la reserva');
+        return res.json();
+      })
+      .then(() => {
+        setMensajeExito(`¡Reserva confirmada, ${nombreUsuario}! Tu sesión para ver "${peliculaElegida}" en "${cabinaSeleccionada}" está lista.`);
+        setNombreUsuario('');
+        setFechaReserva('');
+        setCabinaSeleccionada('');
+        setPeliculaElegida('');
+>>>>>>> 357c59f (sala y prestamo)
         setTimeout(() => setMensajeExito(null), 6000);
       })
       .catch((err) => console.error("Error en la reserva:", err));
   };
 
   return (
-    <div className="min-h-screen bg-[#080808] text-white pt-24 px-6 md:px-16 pb-16">
+    <div className="sala-container min-h-screen bg-[#080808] text-white pt-24 px-6 md:px-16 pb-16">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-wide text-[#e50914] mb-3 drop-shadow-[0_0_10px_rgba(229,9,20,0.6)]">
           Sala de Proyección & Terminales PC
         </h2>
         <p className="text-zinc-400 text-sm md:text-base">
+<<<<<<< HEAD
           Aparta una de nuestras 3 cabinas privadas equipadas con PC y elige qué
           cinta de tus estantes deseas reproducir.
+=======
+          Aparta una cabina privada y elige la cinta de terror que deseas reproducir desde nuestros estantes conectados.
+>>>>>>> 357c59f (sala y prestamo)
         </p>
       </div>
 
       {mensajeExito && (
-        <div className="max-w-xl mx-auto mb-8 bg-[#e50914]/20 border border-[#e50914] text-red-200 p-4 rounded text-center shadow-[0_0_15px_rgba(229,9,20,0.4)] animate-bounce">
+        <div className="max-w-xl mx-auto mb-8 bg-[#e50914]/25 border border-[#e50914] text-red-200 p-4 rounded text-center shadow-[0_0_15px_rgba(229,9,20,0.4)]">
           <p className="font-bold text-sm">{mensajeExito}</p>
         </div>
       )}
 
       {cargando ? (
+<<<<<<< HEAD
         <p className="text-white text-center py-20 animate-pulse">
           Sintonizando cabinas y estantes del videoclub...
         </p>
       ) : (
         <div className="max-w-7xl mx-auto space-y-12">
           {/* 1. Selección de las 3 Cabinas */}
+=======
+        <p className="text-white text-center py-20 animate-pulse">Sintonizando cabinas y estantes...</p>
+      ) : (
+        <div className="max-w-7xl mx-auto space-y-12">
+          
+          {/* 1. Selección de Cabinas */}
+>>>>>>> 357c59f (sala y prestamo)
           <div>
             <h3 className="text-xl font-bold uppercase text-zinc-200 mb-6 border-l-4 border-[#e50914] pl-3">
-              1. Selecciona tu Cabina (3 Disponibles)
+              1. Selecciona tu Cabina
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {cabinasFijas.map((sala) => {
+              {salas.map((sala) => {
                 const seleccionada = cabinaSeleccionada === sala.nombre;
                 return (
                   <div
                     key={sala.id}
                     onClick={() => setCabinaSeleccionada(sala.nombre)}
                     className={`bg-zinc-900 border rounded-lg overflow-hidden cursor-pointer transition-all duration-300 flex flex-col justify-between ${
+<<<<<<< HEAD
                       seleccionada
                         ? "border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_20px_rgba(229,9,20,0.5)] scale-[1.02]"
                         : "border-zinc-800 hover:border-zinc-600"
+=======
+                      seleccionada ? 'border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_20px_rgba(229,9,20,0.5)] scale-[1.02]' : 'border-zinc-800 hover:border-zinc-700'
+>>>>>>> 357c59f (sala y prestamo)
                     }`}
                   >
                     <div className="relative h-44 bg-black">
@@ -194,10 +258,10 @@ export default function Sala() {
             </div>
           </div>
 
-          {/* 2. Selector de Películas de tu JSON usando exactamente tus carpetas reales (Top 5/, Clasicos/, los-masvistos/) */}
+          {/* 2. Selector de Películas por Categorías */}
           <div>
             <h3 className="text-xl font-bold uppercase text-zinc-200 mb-6 border-l-4 border-[#e50914] pl-3">
-              2. Selecciona la Cinta a Proyectar (Haz clic en una película)
+              2. Selecciona la Cinta a Proyectar
             </h3>
 
             <div className="space-y-6 bg-zinc-950 p-6 rounded-lg border border-zinc-800">
@@ -209,7 +273,11 @@ export default function Sala() {
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                     {peliculas.map((movie) => {
                       const esSeleccionada = peliculaElegida === movie.titulo;
+<<<<<<< HEAD
                       const rutaFinalImagen = obtenerRutaImagen(movie.imagen);
+=======
+                      const rutaImagen = obtenerRutaImagen(movie.imagen);
+>>>>>>> 357c59f (sala y prestamo)
 
                       return (
                         <div
@@ -221,6 +289,7 @@ export default function Sala() {
                               : "border-zinc-800 hover:border-zinc-700"
                           }`}
                         >
+<<<<<<< HEAD
                           <img
                             src={rutaFinalImagen}
                             alt={movie.titulo}
@@ -233,6 +302,16 @@ export default function Sala() {
                               e.target.src =
                                 "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop";
                             }}
+=======
+                          <img 
+                            src={rutaImagen} 
+                            alt={movie.titulo} 
+                            className="w-full h-36 object-cover rounded mb-2 bg-black shadow" 
+                            onError={(e) => {
+                              console.warn("No se pudo cargar la imagen:", rutaImagen);
+                              e.target.src = "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop";
+                            }} 
+>>>>>>> 357c59f (sala y prestamo)
                           />
                           <p className="text-xs font-bold text-white truncate capitalize">
                             {movie.titulo}
@@ -251,7 +330,7 @@ export default function Sala() {
             </div>
           </div>
 
-          {/* 3. Formulario de Datos y Confirmación */}
+          {/* 3. Formulario de Datos y Confirmación de Reserva */}
           <div className="max-w-2xl mx-auto bg-zinc-900 border border-zinc-800 p-8 rounded-lg shadow-xl">
             <h3 className="text-xl font-bold uppercase text-zinc-200 mb-6 text-center">
               3. Datos de tu Sesión Nocturna

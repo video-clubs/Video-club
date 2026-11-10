@@ -1,4 +1,3 @@
-
 {
   "peliculasTerror": [
     {
@@ -193,5 +192,43 @@
         "imagen": "/peliculas/los-mas-vistos/it.webp"
       }
     ]
-  }
+  },
+  "salas": [
+    {
+      "id": "1",
+      "nombre": "Sala 1: El Sótano VHS",
+      "descripcion": "Equipada con PC retro, sistema de sonido envolvente y proyector de cinta analógica.",
+      "capacidad": "Hasta 4 personas",
+      "imagen": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    },
+    {
+      "id": "2",
+      "nombre": "Sala 2: La Cripta Slasher",
+      "descripcion": "Cabina oscura con PC de alta potencia para streaming de terror y maratones nocturnas.",
+      "capacidad": "Hasta 2 personas",
+      "imagen": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    },
+    {
+      "id": "3",
+      "nombre": "Sala 3: El Laboratorio Z",
+      "descripcion": "Espacio amplio con terminales múltiples y ambientación de búnker post-apocalíptico.",
+      "capacidad": "Hasta 6 personas",
+      "imagen": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    }
+  ],
+  "prestamos": [
+    {
+      "nombre": "Roberto",
+      "apellido": "Camilo",
+      "documento": "123413251234",
+      "pelicula": "El resplandor",
+      "fecha": "10/11/2026",
+      "id": "9QPP3bVb8QA"
+    }
+  ],
+  "reservas": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
