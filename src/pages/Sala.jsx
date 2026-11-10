@@ -292,4 +292,5 @@ export default function Sala() {
       )}
     </div>
   );
+>>>>>>> 9d6e648 (Update Sala.jsx)
 }
