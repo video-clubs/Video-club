@@ -1,47 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // Las 3 cabinas oficiales de nuestro videoclub equipadas con PC
 const cabinasFijas = [
   {
     id: "cabina-1",
     nombre: "Sala 1: El Sótano VHS",
-    descripcion: "Equipada con PC retro, sistema de sonido envolvente y proyector de cinta analógica.",
+    descripcion:
+      "Equipada con PC retro, sistema de sonido envolvente y proyector de cinta analógica.",
     capacidad: "Hasta 4 personas",
-    imagen: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop"
+    imagen:
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop",
   },
   {
     id: "cabina-2",
     nombre: "Sala 2: La Cripta Slasher",
-    descripcion: "Cabina oscura con PC de alta potencia para streaming de terror y maratones nocturnas.",
+    descripcion:
+      "Cabina oscura con PC de alta potencia para streaming de terror y maratones nocturnas.",
     capacidad: "Hasta 2 personas",
-    imagen: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop"
+    imagen:
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop",
   },
   {
     id: "cabina-3",
     nombre: "Sala 3: El Laboratorio Z",
-    descripcion: "Espacio amplio con terminales múltiples y ambientación de búnker post-apocalíptico.",
+    descripcion:
+      "Espacio amplio con terminales múltiples y ambientación de búnker post-apocalíptico.",
     capacidad: "Hasta 6 personas",
-    imagen: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=400&auto=format&fit=crop"
-  }
+    imagen:
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=400&auto=format&fit=crop",
+  },
 ];
 
 export default function Sala() {
   const [catalog, setCatalog] = useState({});
   const [cargando, setCargando] = useState(true);
-  
+
   // Estados del formulario de reserva
-  const [cabinaSeleccionada, setCabinaSeleccionada] = useState('');
-  const [peliculaElegida, setPeliculaElegida] = useState('');
-  const [nombreUsuario, setNombreUsuario] = useState('');
-  const [fechaReserva, setFechaReserva] = useState('');
-  const [horario, setHorario] = useState('18:00 - 21:00');
+  const [cabinaSeleccionada, setCabinaSeleccionada] = useState("");
+  const [peliculaElegida, setPeliculaElegida] = useState("");
+  const [nombreUsuario, setNombreUsuario] = useState("");
+  const [fechaReserva, setFechaReserva] = useState("");
+  const [horario, setHorario] = useState("18:00 - 21:00");
   const [mensajeExito, setMensajeExito] = useState(null);
 
   useEffect(() => {
     // Petición al endpoint del catálogo en tu json-server
-    fetch('http://localhost:3000/catalogo')
+    fetch("http://localhost:3000/catalogo")
       .then((res) => {
-        if (!res.ok) throw new Error('Error al cargar el catálogo de películas');
+        if (!res.ok)
+          throw new Error("Error al cargar el catálogo de películas");
         return res.json();
       })
       .then((data) => {
@@ -49,7 +56,7 @@ export default function Sala() {
         setCargando(false);
       })
       .catch((err) => {
-        console.error('Error al conectar con la API:', err);
+        console.error("Error al conectar con la API:", err);
         setCatalog({});
         setCargando(false);
       });
@@ -58,13 +65,20 @@ export default function Sala() {
   // Función para formatear la ruta exactamente como está en tu carpeta public
   const obtenerRutaImagen = (ruta) => {
     if (!ruta) return "";
-    return ruta.startsWith('/') ? ruta : `/${ruta}`;
+    return ruta.startsWith("/") ? ruta : `/${ruta}`;
   };
 
   const handleReservar = (e) => {
     e.preventDefault();
-    if (!cabinaSeleccionada || !peliculaElegida || !nombreUsuario || !fechaReserva) {
-      alert('Por favor, selecciona una cabina, una película de tu listado, tu nombre y la fecha.');
+    if (
+      !cabinaSeleccionada ||
+      !peliculaElegida ||
+      !nombreUsuario ||
+      !fechaReserva
+    ) {
+      alert(
+        "Por favor, selecciona una cabina, una película de tu listado, tu nombre y la fecha.",
+      );
       return;
     }
 
@@ -75,27 +89,30 @@ export default function Sala() {
       pelicula: peliculaElegida,
       fecha: fechaReserva,
       horario: horario,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
 
-    fetch('http://localhost:3000/reservas', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    fetch("http://localhost:3000/reservas", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(nuevaReserva),
     })
       .then((res) => {
-        if (!res.ok) throw new Error('Error al registrar la reserva en la base de datos');
+        if (!res.ok)
+          throw new Error("Error al registrar la reserva en la base de datos");
         return res.json();
       })
       .then(() => {
-        setMensajeExito(`¡Cabina reservada con éxito, ${nombreUsuario}! Tu sesión para ver "${peliculaElegida}" está asegurada.`);
-        setNombreUsuario('');
-        setFechaReserva('');
-        setCabinaSeleccionada('');
-        setPeliculaElegida('');
+        setMensajeExito(
+          `¡Cabina reservada con éxito, ${nombreUsuario}! Tu sesión para ver "${peliculaElegida}" está asegurada.`,
+        );
+        setNombreUsuario("");
+        setFechaReserva("");
+        setCabinaSeleccionada("");
+        setPeliculaElegida("");
         setTimeout(() => setMensajeExito(null), 6000);
       })
-      .catch((err) => console.error('Error en la reserva:', err));
+      .catch((err) => console.error("Error en la reserva:", err));
   };
 
   return (
@@ -105,7 +122,8 @@ export default function Sala() {
           Sala de Proyección & Terminales PC
         </h2>
         <p className="text-zinc-400 text-sm md:text-base">
-          Aparta una de nuestras 3 cabinas privadas equipadas con PC y elige qué cinta de tus estantes deseas reproducir.
+          Aparta una de nuestras 3 cabinas privadas equipadas con PC y elige qué
+          cinta de tus estantes deseas reproducir.
         </p>
       </div>
 
@@ -116,10 +134,11 @@ export default function Sala() {
       )}
 
       {cargando ? (
-        <p className="text-white text-center py-20 animate-pulse">Sintonizando cabinas y estantes del videoclub...</p>
+        <p className="text-white text-center py-20 animate-pulse">
+          Sintonizando cabinas y estantes del videoclub...
+        </p>
       ) : (
         <div className="max-w-7xl mx-auto space-y-12">
-          
           {/* 1. Selección de las 3 Cabinas */}
           <div>
             <h3 className="text-xl font-bold uppercase text-zinc-200 mb-6 border-l-4 border-[#e50914] pl-3">
@@ -129,28 +148,44 @@ export default function Sala() {
               {cabinasFijas.map((sala) => {
                 const seleccionada = cabinaSeleccionada === sala.nombre;
                 return (
-                  <div 
+                  <div
                     key={sala.id}
                     onClick={() => setCabinaSeleccionada(sala.nombre)}
                     className={`bg-zinc-900 border rounded-lg overflow-hidden cursor-pointer transition-all duration-300 flex flex-col justify-between ${
-                      seleccionada ? 'border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_20px_rgba(229,9,20,0.5)] scale-[1.02]' : 'border-zinc-800 hover:border-zinc-600'
+                      seleccionada
+                        ? "border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_20px_rgba(229,9,20,0.5)] scale-[1.02]"
+                        : "border-zinc-800 hover:border-zinc-600"
                     }`}
                   >
                     <div className="relative h-44 bg-black">
-                      <img src={sala.imagen} alt={sala.nombre} className="w-full h-full object-cover opacity-80" />
+                      <img
+                        src={sala.imagen}
+                        alt={sala.nombre}
+                        className="w-full h-full object-cover opacity-80"
+                      />
                       <span className="absolute top-2 left-2 bg-[#e50914] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
                         {sala.capacidad}
                       </span>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-base mb-1">{sala.nombre}</h4>
-                      <p className="text-zinc-400 text-xs">{sala.descripcion}</p>
+                      <h4 className="font-bold text-base mb-1">
+                        {sala.nombre}
+                      </h4>
+                      <p className="text-zinc-400 text-xs">
+                        {sala.descripcion}
+                      </p>
                     </div>
                     <div className="p-4 pt-0">
-                      <span className={`block text-center text-xs font-bold py-2 rounded transition-colors ${
-                        seleccionada ? 'bg-[#e50914] text-white' : 'bg-zinc-800 text-zinc-300'
-                      }`}>
-                        {seleccionada ? '✓ Cabina Seleccionada' : 'Elegir Cabina'}
+                      <span
+                        className={`block text-center text-xs font-bold py-2 rounded transition-colors ${
+                          seleccionada
+                            ? "bg-[#e50914] text-white"
+                            : "bg-zinc-800 text-zinc-300"
+                        }`}
+                      >
+                        {seleccionada
+                          ? "✓ Cabina Seleccionada"
+                          : "Elegir Cabina"}
                       </span>
                     </div>
                   </div>
@@ -164,36 +199,48 @@ export default function Sala() {
             <h3 className="text-xl font-bold uppercase text-zinc-200 mb-6 border-l-4 border-[#e50914] pl-3">
               2. Selecciona la Cinta a Proyectar (Haz clic en una película)
             </h3>
-            
+
             <div className="space-y-6 bg-zinc-950 p-6 rounded-lg border border-zinc-800">
               {Object.entries(catalog).map(([nombreCategoria, peliculas]) => (
                 <div key={nombreCategoria}>
-                  <h4 className="text-sm font-bold text-red-500 uppercase mb-3 tracking-wider">{nombreCategoria}</h4>
+                  <h4 className="text-sm font-bold text-red-500 uppercase mb-3 tracking-wider">
+                    {nombreCategoria}
+                  </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                     {peliculas.map((movie) => {
                       const esSeleccionada = peliculaElegida === movie.titulo;
                       const rutaFinalImagen = obtenerRutaImagen(movie.imagen);
-                      
+
                       return (
-                        <div 
+                        <div
                           key={movie.id + movie.titulo}
                           onClick={() => setPeliculaElegida(movie.titulo)}
                           className={`cursor-pointer bg-zinc-900 rounded p-2 border transition-all ${
-                            esSeleccionada ? 'border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_15px_rgba(229,9,20,0.5)]' : 'border-zinc-800 hover:border-zinc-700'
+                            esSeleccionada
+                              ? "border-[#e50914] ring-2 ring-[#e50914] shadow-[0_0_15px_rgba(229,9,20,0.5)]"
+                              : "border-zinc-800 hover:border-zinc-700"
                           }`}
                         >
-                          <img 
-                            src={rutaFinalImagen} 
-                            alt={movie.titulo} 
-                            className="w-full h-36 object-cover rounded mb-2 bg-black shadow" 
+                          <img
+                            src={rutaFinalImagen}
+                            alt={movie.titulo}
+                            className="w-full h-36 object-cover rounded mb-2 bg-black shadow"
                             onError={(e) => {
-                              console.warn("No se pudo cargar la imagen:", rutaFinalImagen);
-                              e.target.src = "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop";
-                            }} 
+                              console.warn(
+                                "No se pudo cargar la imagen:",
+                                rutaFinalImagen,
+                              );
+                              e.target.src =
+                                "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop";
+                            }}
                           />
-                          <p className="text-xs font-bold text-white truncate capitalize">{movie.titulo}</p>
-                          <span className={`text-[10px] block mt-1 font-bold ${esSeleccionada ? 'text-red-400' : 'text-zinc-500'}`}>
-                            {esSeleccionada ? '✓ Seleccionada' : 'Elegir'}
+                          <p className="text-xs font-bold text-white truncate capitalize">
+                            {movie.titulo}
+                          </p>
+                          <span
+                            className={`text-[10px] block mt-1 font-bold ${esSeleccionada ? "text-red-400" : "text-zinc-500"}`}
+                          >
+                            {esSeleccionada ? "✓ Seleccionada" : "Elegir"}
                           </span>
                         </div>
                       );
@@ -215,7 +262,7 @@ export default function Sala() {
                 <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-2 font-semibold">
                   Tu Nombre / Alias
                 </label>
-                <input 
+                <input
                   type="text"
                   placeholder="Ej. Ash Williams"
                   value={nombreUsuario}
@@ -230,7 +277,7 @@ export default function Sala() {
                   <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-2 font-semibold">
                     Fecha
                   </label>
-                  <input 
+                  <input
                     type="date"
                     value={fechaReserva}
                     onChange={(e) => setFechaReserva(e.target.value)}
@@ -248,8 +295,12 @@ export default function Sala() {
                     className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-700 rounded text-white text-sm focus:border-[#e50914] focus:outline-none"
                   >
                     <option value="15:00 - 18:00">Tarde (15:00 - 18:00)</option>
-                    <option value="18:00 - 21:00">Vespertina (18:00 - 21:00)</option>
-                    <option value="21:00 - 00:00">Medianoche (21:00 - 00:00)</option>
+                    <option value="18:00 - 21:00">
+                      Vespertina (18:00 - 21:00)
+                    </option>
+                    <option value="21:00 - 00:00">
+                      Medianoche (21:00 - 00:00)
+                    </option>
                   </select>
                 </div>
               </div>
@@ -259,10 +310,10 @@ export default function Sala() {
                   <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-2 font-semibold">
                     Cabina Elegida
                   </label>
-                  <input 
+                  <input
                     type="text"
                     disabled
-                    value={cabinaSeleccionada || 'Ninguna cabina seleccionada'}
+                    value={cabinaSeleccionada || "Ninguna cabina seleccionada"}
                     className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded text-red-400 text-xs font-semibold cursor-not-allowed"
                   />
                 </div>
@@ -270,16 +321,16 @@ export default function Sala() {
                   <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-2 font-semibold">
                     Película Seleccionada
                   </label>
-                  <input 
+                  <input
                     type="text"
                     disabled
-                    value={peliculaElegida || 'Ninguna película elegida'}
+                    value={peliculaElegida || "Ninguna película elegida"}
                     className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded text-red-400 text-xs font-semibold cursor-not-allowed"
                   />
                 </div>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full bg-[#e50914] hover:bg-red-700 text-white font-bold py-3 px-6 rounded transition-all duration-300 shadow-[0_0_15px_rgba(229,9,20,0.5)] cursor-pointer tracking-wider text-sm mt-4"
               >
@@ -287,10 +338,9 @@ export default function Sala() {
               </button>
             </form>
           </div>
-
         </div>
       )}
     </div>
   );
->>>>>>> 9d6e648 (Update Sala.jsx)
+  
 }
