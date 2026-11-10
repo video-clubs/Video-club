@@ -1,5 +1,5 @@
 {
-   "peliculasTerror": [
+  "peliculasTerror": [
     {
       "id": "1",
       "titulo": "Así en la Tierra como en el Infierno",
@@ -20,7 +20,7 @@
       "id": "3",
       "titulo": "El Legado del Diablo",
       "anio": "2018",
-      "genero": "Terror Sobrenatural", 
+      "genero": "Terror Sobrenatural",
       "etiqueta": "NC ORIGINAL",
       "imagen": "/peliculasdeterror/el-legado-deldiablojpg.jpg"
     },
@@ -84,7 +84,7 @@
         "imagen": "Top 5/the ritual.jpg"
       },
       {
-        "id": "3",  
+        "id": "3",
         "titulo": "La posesion de veronica",
         "anio": "2026",
         "genero": "/ Terror / Suspenso",
@@ -141,8 +141,7 @@
         "etiqueta": "CLASICO",
         "imagen": "Clasicos/el-resplandor.webp"
       },
-
-      { 
+      {
         "id": "4",
         "titulo": "Frankenstein",
         "anio": "1931",
@@ -193,5 +192,43 @@
         "imagen": "los-masvistos/it.webp"
       }
     ]
-  }
+  },
+  "salas": [
+    {
+      "id": "5",
+      "titulo": "IT",
+      "anio": "2026",
+      "genero": "/ Terror / Sobrenatural",
+      "etiqueta": "EXCLUSIVO",
+      "imagen": "los-masvistos/it.webp"
+    },
+    {
+      "id": "2",
+      "nombre": "Sala 2: La Cripta Slasher",
+      "descripcion": "Cabina oscura con PC de alta potencia para streaming de terror y maratones nocturnas.",
+      "capacidad": "Hasta 2 personas",
+      "imagen": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    },
+    {
+      "id": "3",
+      "nombre": "Sala 3: El Laboratorio Z",
+      "descripcion": "Espacio amplio con terminales múltiples y ambientación de búnker post-apocalíptico.",
+      "capacidad": "Hasta 6 personas",
+      "imagen": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    }
+  ],
+  "reservas": [
+    {
+      "id": "rneUuzETsCs",
+      "usuario": "Robertp",
+      "cabina": "Sala 3: El Laboratorio Z",
+      "pelicula": "El resplandor",
+      "fecha": "2008-05-03",
+      "horario": "21:00 - 00:00",
+      "timestamp": "2026-11-10T09:42:51.872Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
