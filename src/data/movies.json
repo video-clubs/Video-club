@@ -221,14 +221,24 @@
   ],
   "prestamos": [
     {
-      "nombre": "Roberto",
-      "apellido": "Camilo",
-      "documento": "123413251234",
-      "pelicula": "El resplandor",
+      "nombre": "Ana",
+      "apellido": "Aragon",
+      "documento": "123456788",
+      "pelicula": "Pesadilla",
       "fecha": "10/11/2026",
-      "id": "9QPP3bVb8QA"
+      "id": "gcFueezKFJ4"
     }
   ],
-  "reservas": [],
+  "reservas": [
+    {
+      "id": "h_lLIe9DQ2M",
+      "usuario": "Fabian",
+      "cabina": "Sala 3: El Laboratorio Z",
+      "pelicula": "El resplandor",
+      "fecha": "2027-05-03",
+      "horario": "18:00 - 21:00",
+      "timestamp": "2026-11-10T13:16:06.053Z"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
