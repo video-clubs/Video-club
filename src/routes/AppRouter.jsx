@@ -5,6 +5,7 @@ import Catalogo from "../pages/Catalogo";
 import Sala from "../pages/Sala";
 import Contacto from "../pages/Contacto";
 import NotFound from "../pages/NotFound";
+import Prestamo from "../pages/Prestamo";
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/sala" element={<Sala />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/prestamo" element={<Prestamo />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

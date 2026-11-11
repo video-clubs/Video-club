@@ -1,12 +1,12 @@
 {
-   "peliculasTerror": [
+  "peliculasTerror": [
     {
       "id": "1",
       "titulo": "Así en la Tierra como en el Infierno",
       "anio": "2014",
       "genero": "Found Footage / Misterio",
       "etiqueta": "DESTACADO",
-      "imagen": "/peliculasdeterror/asienlatierra-comoenel-infiernojpg.jpg"
+      "imagen": "/peliculas/asienlatierra-comoenel-infiernojpg.jpg"
     },
     {
       "id": "2",
@@ -14,15 +14,15 @@
       "anio": "1960",
       "genero": "Terror Clásico / Suspenso",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "/peliculasdeterror/psicosis.jpg"
+      "imagen": "/peliculas/psicosis.jpg"
     },
     {
       "id": "3",
       "titulo": "El Legado del Diablo",
       "anio": "2018",
-      "genero": "Terror Sobrenatural", 
+      "genero": "Terror Sobrenatural",
       "etiqueta": "NC ORIGINAL",
-      "imagen": "/peliculasdeterror/el-legado-deldiablojpg.jpg"
+      "imagen": "/peliculas/el-legado-deldiablojpg.jpg"
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "anio": "1984",
       "genero": "Slasher / Retro 80s",
       "etiqueta": "CULTO",
-      "imagen": "/peliculasdeterror/la-noche-de-las-bestias.jpg"
+      "imagen": "/peliculas/la-noche-de-las-bestias.jpg"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "anio": "2023",
       "genero": "Terror Psicológico",
       "etiqueta": "ESTRENO",
-      "imagen": "/peliculasdeterror/voces-enlaoscuridad.jpg"
+      "imagen": "/peliculas/voces-enlaoscuridad.jpg"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "anio": "1986",
       "genero": "Slasher Clásico",
       "etiqueta": "VHS VINTAGE",
-      "imagen": "/peliculasdeterror/masacre-en-elcampento.jpg"
+      "imagen": "/peliculas/masacre-en-elcampento.jpg"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "anio": "2022",
       "genero": "Survival Horror",
       "etiqueta": "POPULAR",
-      "imagen": "/peliculasdeterror/infeccion-z.jpg"
+      "imagen": "/peliculas/infeccion-z.jpg"
     },
     {
       "id": "8",
@@ -62,50 +62,50 @@
       "anio": "2025",
       "genero": "Sobrenatural / Misterio",
       "etiqueta": "EXCLUSIVO",
-      "imagen": "/peliculasdeterror/el-retorno-de-las-sombras.jpg"
+      "imagen": "/peliculas/el-retorno-de-las-sombras.jpg"
     }
   ],
   "catalogo": {
     "TOP 5": [
       {
         "id": "1",
-        "titulo": "sleepwalker",
+        "titulo": "Sleepwalker",
         "anio": "2026",
-        "genero": " / Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "Top 5/sleep-walker.jpg"
+        "imagen": "/peliculas/top-5/sleep-walker.jpg"
       },
       {
         "id": "2",
-        "titulo": "The ritual ",
+        "titulo": "The Ritual",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Top 5/the ritual.jpg"
+        "imagen": "/peliculas/top-5/the-ritual.jpg"
       },
       {
-        "id": "3",  
-        "titulo": "La posesion de veronica",
+        "id": "3",
+        "titulo": "La posesión de Verónica",
         "anio": "2026",
-        "genero": "/ Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "Top 5/la-posesion-veronica.jpg"
+        "imagen": "/peliculas/top-5/la-posesion-veronica.jpg"
       },
       {
         "id": "4",
         "titulo": "Bird Box",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Top 5/bird-box.jpg"
+        "imagen": "/peliculas/top-5/bird-box.jpg"
       },
       {
         "id": "5",
         "titulo": "Anabelle 3",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "Top 5/anabelle.jpg"
+        "imagen": "/peliculas/top-5/anabelle.jpg"
       }
     ],
     "Los clasicos": [
@@ -113,85 +113,122 @@
         "id": "1",
         "titulo": "El exorcista",
         "anio": "1973",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "CLASICO",
-        "imagen": "Clasicos/the-exorcist.webp"
+        "imagen": "/peliculas/clasicos/the-exorcist.webp"
       },
       {
         "id": "2",
-        "titulo": "HALLOWEEN",
+        "titulo": "Halloween",
         "anio": "1960",
-        "genero": "/ Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "CLASICO",
-        "imagen": "Clasicos/halloweenwebp.webp"
+        "imagen": "/peliculas/clasicos/halloweenwebp.webp"
       },
       {
         "id": "3",
-        "titulo": "pesadilla",
+        "titulo": "Pesadilla",
         "anio": "1980",
-        "genero": " Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "CLASICO",
-        "imagen": "Clasicos/pesadilla.webp"
+        "imagen": "/peliculas/clasicos/pesadilla.webp"
       },
       {
         "id": "4",
         "titulo": "El resplandor",
         "anio": "1980",
-        "genero": "/ Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "CLASICO",
-        "imagen": "Clasicos/el-resplandor.webp"
+        "imagen": "/peliculas/clasicos/el-resplandor.webp"
       },
-
-      { 
-        "id": "4",
+      {
+        "id": "5",
         "titulo": "Frankenstein",
         "anio": "1931",
-        "genero": "/ Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "CLASICO",
-        "imagen": "Clasicos/frankenstein.webp"
+        "imagen": "/peliculas/clasicos/frankenstein.webp"
       }
     ],
     "mas vistos": [
       {
         "id": "1",
-        "titulo": "The conjuring ",
+        "titulo": "The Conjuring",
         "anio": "2026",
-        "genero": " / Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "los-masvistos/the-conjuring.webp"
+        "imagen": "/peliculas/los-mas-vistos/the-conjuring.webp"
       },
       {
         "id": "2",
-        "titulo": "la-maldicion ",
+        "titulo": "La maldición",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "los-masvistos/la-maldicion.jpg"
+        "imagen": "/peliculas/los-mas-vistos/la-maldicion.jpg"
       },
       {
         "id": "3",
         "titulo": "La noche de los muertos vivientes",
         "anio": "2026",
-        "genero": "/ Terror / Suspenso",
+        "genero": "Terror / Suspenso",
         "etiqueta": "NUEVO ESTRENO",
-        "imagen": "los-masvistos/la-noche-de-losmuertos-vivientes.webp"
+        "imagen": "/peliculas/los-mas-vistos/la-noche-de-losmuertos-vivientes.webp"
       },
       {
         "id": "4",
-        "titulo": "el proyecto de la bruja de blair",
+        "titulo": "El proyecto de la bruja de Blair",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "los-masvistos/el-proyecto-la-bruja-blair.webp"
+        "imagen": "/peliculas/los-mas-vistos/el-proyecto-la-bruja-blair.webp"
       },
       {
         "id": "5",
         "titulo": "IT",
         "anio": "2026",
-        "genero": "/ Terror / Sobrenatural",
+        "genero": "Terror / Sobrenatural",
         "etiqueta": "EXCLUSIVO",
-        "imagen": "los-masvistos/it.webp"
+        "imagen": "/peliculas/los-mas-vistos/it.webp"
       }
     ]
-  }
+  },
+  "salas": [
+    {
+      "id": "1",
+      "nombre": "Sala 1: El Sótano VHS",
+      "descripcion": "Equipada con PC retro, sistema de sonido envolvente y proyector de cinta analógica.",
+      "capacidad": "Hasta 4 personas",
+      "imagen": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    },
+    {
+      "id": "2",
+      "nombre": "Sala 2: La Cripta Slasher",
+      "descripcion": "Cabina oscura con PC de alta potencia para streaming de terror y maratones nocturnas.",
+      "capacidad": "Hasta 2 personas",
+      "imagen": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    },
+    {
+      "id": "3",
+      "nombre": "Sala 3: El Laboratorio Z",
+      "descripcion": "Espacio amplio con terminales múltiples y ambientación de búnker post-apocalíptico.",
+      "capacidad": "Hasta 6 personas",
+      "imagen": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=400&auto=format&fit=crop",
+      "estado": "Disponible"
+    }
+  ],
+  "prestamos": [
+    {
+      "nombre": "Roberto",
+      "apellido": "Camilo",
+      "documento": "123413251234",
+      "pelicula": "El resplandor",
+      "fecha": "10/11/2026",
+      "id": "9QPP3bVb8QA"
+    }
+  ],
+  "reservas": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
