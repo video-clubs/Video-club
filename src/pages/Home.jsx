@@ -1,12 +1,11 @@
+// src/pages/Home.jsx
 import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero/Hero';
 import MovieRow from '../components/MovieRow/MovieRow';
 
 function Home() {
-  // 1. Definimos el estado para guardar las películas que vienen del JSON
   const [peliculasTerror, setPeliculasTerror] = useState([]);
 
-  // 2. Usamos useEffect para hacer la petición fetch cuando el componente se monte
   useEffect(() => {
     fetch('http://localhost:3000/peliculasTerror')
       .then((res) => {
@@ -14,7 +13,6 @@ function Home() {
         return res.json();
       })
       .then((data) => {
-        // 3. Guardamos los datos obtenidos en el estado
         setPeliculasTerror(data);
       })
       .catch((err) => {
@@ -23,10 +21,10 @@ function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#080808]">
+    <div className="min-h-screen bg-[#080808] overflow-x-hidden">
       <Hero />
-      <div className="home-content pb-12">
-        {/* Se renderiza la fila pasando las películas obtenidas del servidor */}
+      <div className="home-content pb-16 px-4 sm:px-6 md:px-16">
+        {/* Se renderiza la fila adaptada para móvil y escritorio */}
         <MovieRow title="Películas de Terror" movies={peliculasTerror} />
       </div>
     </div>
