@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Video-club/', 
+  base: '/video-club/', 
 })
