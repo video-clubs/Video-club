@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 function MovieRow({ title, movies = [] }) {
   const rowRef = useRef(null);
 
-  // Desplazar el carrusel
+
   const handleScroll = (direction) => {
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
@@ -21,7 +21,7 @@ function MovieRow({ title, movies = [] }) {
   };
 
   return (
-    <section className="relative w-full bg-[#080808] px-6 py-4 md:px-16">
+    <section className="relative w-full bg-[#080808]  py-4 ">
       <h2 className="mb-4 border-l-4 border-[#e50914] pl-3 text-2xl font-extrabold uppercase tracking-wider text-white">
         {title}
       </h2>

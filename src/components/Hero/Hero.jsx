@@ -12,7 +12,7 @@ export const Hero = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="relative h-[85vh] min-h-[550px] w-full overflow-hidden bg-black text-white">
+    <section className="relative h-[75vh] min-h-[620px] w-full overflow-hidden bg-black text-white md:h-[85vh] md:min-h-[550px]">
       <HeroVideo
         videoSrc={movie.videoSrc}
         isMuted={isMuted}

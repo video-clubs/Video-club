@@ -21,7 +21,7 @@ const HeroContent = ({
         </span>
       </h1>
 
-      <p className="line-clamp-3 text-sm leading-relaxed text-[#c0c0c0] sm:text-base">
+      <p className="line-clamp-3 text-sm leading-relaxed text-[#c0c0c0] sm:text-xl">
         {movie.description}
       </p>
 
