@@ -25,7 +25,6 @@ const HeroContent = ({
         {movie.description}
       </p>
 
-      {/* Botones de acción */}
       <div className="mt-2 flex items-center gap-4">
 
         <button

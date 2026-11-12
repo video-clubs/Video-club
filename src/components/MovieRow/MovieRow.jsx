@@ -22,14 +22,11 @@ function MovieRow({ title, movies = [] }) {
 
   return (
     <section className="relative w-full bg-[#080808] px-6 py-4 md:px-16">
-      {/* Título */}
       <h2 className="mb-4 border-l-4 border-[#e50914] pl-3 text-2xl font-extrabold uppercase tracking-wider text-white">
         {title}
       </h2>
 
-      {/* Contenedor del carrusel */}
       <div className="relative flex items-center">
-        {/* Flecha izquierda */}
         <button
           type="button"
           onClick={() => handleScroll("left")}
@@ -39,17 +36,18 @@ function MovieRow({ title, movies = [] }) {
           &#10094;
         </button>
 
-        {/* Tarjetas */}
         <div
           ref={rowRef}
           className="flex w-full gap-[1.2rem] overflow-x-auto px-2 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {movies.map((movie, index) => (
-            <MovieCard key={movie.id ? `${movie.id}-${index}` : index} movie={movie} />
+            <MovieCard
+              key={movie.id ? `${movie.id}-${index}` : index}
+              movie={movie}
+            />
           ))}
         </div>
 
-        {/* Flecha derecha */}
         <button
           type="button"
           onClick={() => handleScroll("right")}

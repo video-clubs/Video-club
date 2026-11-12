@@ -1,7 +1,6 @@
 const HeroVideo = ({ videoSrc, isMuted, onToggleSound }) => {
   return (
     <>
-      {/* Vídeo de fondo */}
       <div className="absolute inset-0 z-[1]">
         <video
           className="pointer-events-none h-full w-full object-cover"
@@ -12,7 +11,6 @@ const HeroVideo = ({ videoSrc, isMuted, onToggleSound }) => {
           playsInline
         />
 
-        {/* Degradado sobre el vídeo */}
         <div
           className="pointer-events-none absolute inset-0 z-[2]"
           style={{
@@ -34,7 +32,6 @@ const HeroVideo = ({ videoSrc, isMuted, onToggleSound }) => {
         />
       </div>
 
-      {/* Botón de sonido */}
       <button
         type="button"
         onClick={onToggleSound}

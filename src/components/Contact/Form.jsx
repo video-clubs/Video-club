@@ -1,28 +1,25 @@
 import { useState } from "react";
 
-// Estilo que comparten todos los campos
-// Fondo más claro y borde grueso para que se vea sobre el fondo negro
+
 const estiloCampo =
   "w-full rounded-md border-2 border-[#444] bg-[#1e1e1e] px-4 py-3 text-xl tracking-wide text-white outline-none placeholder:text-[#9a9a9a] focus:border-[#e50914] focus:bg-[#242424] focus:shadow-[0_0_10px_rgba(229,9,20,0.4)]";
 
-// Estilo común de las etiquetas (Tu nombre, Correo...)
+
 const estiloEtiqueta = "text-xl tracking-wide text-white";
 
 function Form() {
-  // Un estado por cada campo
+
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  // Estado para el mensaje de error y para saber si ya se envió
+ 
   const [error, setError] = useState("");
   const [enviado, setEnviado] = useState(false);
 
   function handleSubmit(e) {
-    e.preventDefault(); // evita que la página se recargue
-
-    // Comprobamos los campos obligatorios
+    e.preventDefault(); 
     if (nombre.trim() === "" || email.trim() === "" || mensaje.trim() === "") {
       setError("Rellena tu nombre, tu correo y el mensaje.");
       return;
@@ -33,7 +30,7 @@ function Form() {
       return;
     }
 
-    // Todo bien: aquí iría el envío real (EmailJS, backend...)
+  
     console.log({ nombre, email, telefono, mensaje });
 
     setError("");
@@ -123,7 +120,7 @@ function Form() {
               />
             </div>
 
-            {/* El error solo se muestra si hay texto en "error" */}
+
             {error && <p className="text-lg text-[#ff4d55]">{error}</p>}
 
             <button
