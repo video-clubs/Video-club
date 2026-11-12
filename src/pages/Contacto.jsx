@@ -8,17 +8,21 @@ function Contacto() {
   return (
     <div className="min-h-screen bg-[#080808] text-white px-4 sm:px-6 md:px-16 pt-24 pb-16 overflow-x-hidden">
 
-      <Title />
+      <div className="max-w-7xl mx-auto">
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 max-w-7xl mx-auto mt-8">
+        <Title />
 
-        <div className="flex flex-col gap-6">
-          <Info />
-          <Map />
-        </div>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 mt-8">
 
-        <div>
-          <Form />
+          <div className="flex flex-col gap-6">
+            <Info />
+            <Map />
+          </div>
+
+          <div>
+            <Form />
+          </div>
+
         </div>
 
       </div>
