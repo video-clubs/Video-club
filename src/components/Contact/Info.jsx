@@ -9,7 +9,7 @@ import {
 function Info() {
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="mb-2 border-l-[3px] border-[#e50914] pl-2 text-base font-bold uppercase tracking-wide text-white">
+      <h2 className="mb-2 border-l-[3px] border-[#e50914] pl-2 text-2xl font-bold uppercase tracking-wide text-white">
         Encuéntranos
       </h2>
 
