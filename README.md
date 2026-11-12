@@ -122,6 +122,19 @@ Navega a `http://localhost:5173/Video-club/` en tu navegador.
 
 ---
 
+## 🚀 Despliegue en Vercel
+
+1. Importa el repositorio `video-clubs/Video-club` desde el panel de Vercel.
+2. Usa estos ajustes de build:
+   * **Framework Preset:** Vite
+   * **Build Command:** `npm run build`
+   * **Output Directory:** `dist`
+3. Pulsa **Deploy**. En Vercel, Vite genera rutas de assets desde `/`; en GitHub Pages conserva el prefijo `/video-club/`.
+
+La app actualmente consulta `http://localhost:3000` para los datos de películas, préstamos y reservas. Eso solo funciona en tu máquina local: para que esas funciones trabajen en producción, configura un backend accesible públicamente y reemplaza esas URLs antes del despliegue. Los archivos del frontend y sus imágenes sí se sirven desde Vercel.
+
+---
+
 ## 📁 Estructura del Proyecto
 
 ```text

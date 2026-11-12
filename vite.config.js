@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/video-club/', 
+  base: process.env.VERCEL ? '/' : '/video-club/',
 })

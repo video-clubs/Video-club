@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';export default function NotFo
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
+    
   return (
     <div 
       className="relative min-h-screen bg-black text-red-700 font-mono overflow-hidden flex flex-col justify-center items-center selection:bg-red-900 selection:text-black cursor-crosshair"
