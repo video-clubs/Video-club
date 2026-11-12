@@ -219,16 +219,7 @@
       "estado": "Disponible"
     }
   ],
-  "prestamos": [
-    {
-      "nombre": "Ana",
-      "apellido": "Aragon",
-      "documento": "123456788",
-      "pelicula": "Pesadilla",
-      "fecha": "10/11/2026",
-      "id": "gcFueezKFJ4"
-    }
-  ],
+  "prestamos": [],
   "reservas": [
     {
       "id": "h_lLIe9DQ2M",
@@ -238,6 +229,15 @@
       "fecha": "2027-05-03",
       "horario": "18:00 - 21:00",
       "timestamp": "2026-11-10T13:16:06.053Z"
+    },
+    {
+      "id": "jkGtd6agDN4",
+      "usuario": "GAbi",
+      "cabina": "Sala 2: La Cripta Slasher",
+      "pelicula": "The Ritual",
+      "fecha": "2027-02-20",
+      "horario": "21:00 - 00:00",
+      "timestamp": "2026-11-12T11:13:06.854Z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
